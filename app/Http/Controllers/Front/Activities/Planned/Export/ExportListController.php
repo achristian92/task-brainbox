@@ -31,6 +31,7 @@ class ExportListController extends Controller
                            ->map(function ($activity) {
                                return $this->transActivityReport($activity, true);
                            });
+
         $monthName = $date['format']->monthName."-".$date['format']->year;
 
         $user = $this->userRepo->findUserById($user_id);

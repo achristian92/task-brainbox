@@ -76,9 +76,6 @@ Route::group(['prefix' => 'api', 'middleware' => ['auth']], function () {
     Route::namespace('Front')->group(function () {
         Route::get('admin/dashboard','Dashboard\DashboardController');
 
-
-
-
         Route::get('tracks','Tracks\TrackController@index');//new
         Route::get('track/users/{user_id}','Tracks\TrackShowController');
 

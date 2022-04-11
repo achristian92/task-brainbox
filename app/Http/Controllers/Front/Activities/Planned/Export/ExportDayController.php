@@ -25,9 +25,9 @@ class ExportDayController extends Controller
 
     public function __invoke(Request $request, int $user_id)
     {
-        $date = $this->beginEndMonth($request);
+        $date   = $this->beginEndMonth($request);
         $period = $date['range'];
-        $user = $this->userRepo->findUserById($user_id);
+        $user   = $this->userRepo->findUserById($user_id);
 
         $data = $this->queryActivities($date['begin'],$date['end'],$user_id,null,true)
                      ->transform(function ($activity) {

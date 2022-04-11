@@ -21,7 +21,7 @@
                 <td>{{ $act['name'] }}</td>
                 <td>{{ $act['estimatedTime'] }}</td>
                 <td>{{ $act['statusName'] }}</td>
-                <td>{{ $act['tags'] }}</td>
+                <td>{{ $act['tag'] }}</td>
                 <td>{{ $act['description'] }}</td>
             </tr>
         @endforeach
